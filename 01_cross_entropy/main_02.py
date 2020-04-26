@@ -31,6 +31,12 @@ def main():
 	# spin up the environment
 	env = gym.make('MountainCarContinuous-v0')
 	
+	# view environment state and action spaces
+	print('observation space:', env.observation_space)
+	print('action space:', env.action_space)
+	print('   - low:', env.action_space.low)
+	print('   - high', env.action_space.high)
+	
 	# specify seeds to replicability
 	env.seed(101)
 	np.random.seed(101)
